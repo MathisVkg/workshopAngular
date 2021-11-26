@@ -3,13 +3,13 @@
 
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
   <div class="field">
-    <input type="text" placeholder="Buy Eggs" class="input">
+    <input type="text" required name="title" placeholder="Buy Eggs" class="input" [ngModel]="item.title">
   </div>
   <div class="field">
-    <input type="text" placeholder="shopping" class="input">
+    <input type="text" required name="category" placeholder="shopping" class="input" [ngModel]="item.category">
   </div>
   <div class="field">
-    <input type="date" class="inputDate">
+    <input type="date" required name="date" class="inputDate" [ngModel]="item.date">
   </div>
-  <button type="submit" class="submitButton">ADD</button>
+  <button type="submit" class="submitButton" [disabled]="!itemForm.valid">ADD</button>
 </form>
