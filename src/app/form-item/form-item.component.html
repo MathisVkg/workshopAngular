@@ -1,1 +1,15 @@
-<p>form-item works!</p>
+
+<p class="addItem">Add item to your list</p>
+
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+  <div class="field">
+    <input type="text" placeholder="Buy Eggs" class="input">
+  </div>
+  <div class="field">
+    <input type="text" placeholder="shopping" class="input">
+  </div>
+  <div class="field">
+    <input type="date" class="inputDate">
+  </div>
+  <button type="submit" class="submitButton">ADD</button>
+</form>

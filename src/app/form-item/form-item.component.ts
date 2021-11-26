@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { todoItemModel } from '../models/todo-item.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-item',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormItemComponent implements OnInit {
 
+  //@ts-ignore
+  @Input() item: todoItemModel = new todoItemModel('','','', false);
+  @Output() formSubmit: EventEmitter<todoItemModel> = new EventEmitter<todoItemModel>();
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  onSubmit(form: NgForm) {
+    this.formSubmit.emit(form.value);
+    form.reset();
   }
 
 }

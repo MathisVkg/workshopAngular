@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { todoItemModel } from '../models/todo-item.model';
+
 
 @Component({
   selector: 'app-card-item',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardItemComponent implements OnInit {
 
+  //@ts-ignore
+  @Input() item: todoItemModel;
   constructor() { }
 
   ngOnInit(): void {
