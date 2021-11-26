@@ -1,0 +1,37 @@
+
+.mainContainer {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 30px 15px;
+  .title {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 2.5em;
+  }
+  .description {
+    margin: 0 auto;
+    font-size: 1.2em;
+    width: 250px;
+  }
+}
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  p {
+    background-color: #494949;
+    padding: 10px 85px 10px 10px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .name {
+    border-radius: 4px 0 0 4px;
+  }
+  .status {
+    padding-right: 10px;
+    border-radius: 0 4px 4px 0;
+  }
+}
